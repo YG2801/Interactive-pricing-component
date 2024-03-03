@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/faviconMain.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Interactive pricing component</title>
+  </head>
+  <body class="font-manrope flex min-h-screen justify-center">
+    <img class="w-full absolute -z-10 h-1/2" src="./images/bg-pattern.svg" alt="" />
+    <main class="mt-10 p-4 sm:w-[500px]">
+      <div class="relative py-10 text-center sm:py-12">
+        <h1
+          class="text-Dark-Desaturated-Blue text-xl font-extrabold sm:text-2xl"
+        >
+          Simple, traffic-based pricing
+        </h1>
+        <h4
+          class="text-Grayish-Blue mt-2 px-8 text-sm font-semibold leading-6 sm:text-base"
+        >
+          Sign-up for our 30-day trial. No credit card required.
+        </h4>
+
+        <svg
+          class="absolute left-1/2 top-0 h-full -translate-x-1/2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="146"
+          height="145"
+        >
+          <g
+            class="stroke-Grayish-Blue opacity-50"
+            fill="none"
+            fill-rule="evenodd"
+            stroke="#CFD8EF"
+          >
+            <circle cx="63" cy="82" r="62.5" />
+            <circle cx="105" cy="41" r="40.5" />
+          </g>
+        </svg>
+      </div>
+      <div class="bg-White mt-8 rounded-md px-4 py-6 shadow-lg sm:px-6 sm:py-8">
+        <div
+          class="flex flex-col items-center gap-6 sm:flex-row sm:flex-wrap sm:gap-x-0 sm:gap-y-8"
+        >
+          <p
+            class="text-Grayish-Blue grow text-xs font-semibold uppercase tracking-wider sm:order-1 sm:basis-1/2 sm:text-sm"
+            id="pageviews"
+          >
+            100k pageviews
+          </p>
+          <div class="slider-container sm:order-3 sm:grow sm:basis-full">
+            <input
+              type="range"
+              name="pageviews-number"
+              id="slider"
+              value="3"
+              min="1"
+              max="5"
+              class="slider"
+            />
+            <div class="runner"></div>
+          </div>
+
+          <div class="flex items-center gap-2 sm:order-2 sm:grow sm:basis-1/2">
+            <h2
+              id="price"
+              class="text-Dark-Desaturated-Blue text-2xl font-extrabold sm:text-3xl"
+            >
+              $16.00
+            </h2>
+            <p class="text-Grayish-Blue text-sm">/ month</p>
+          </div>
+        </div>
+        <div
+          class="text-Grayish-Blue mt-8 flex items-center justify-center gap-2 text-xs font-semibold sm:mt-10 sm:text-sm"
+        >
+          <p>Monthly Billing</p>
+          <div
+            class="toggle-container flex h-[20px] w-[40px] cursor-pointer items-center rounded-[20px] bg-[#cdd7ee] px-[2px] py-[1px] transition-colors"
+          >
+            <div
+              class="toggle-ball size-[15px] rounded-full bg-white transition-transform"
+            ></div>
+          </div>
+          <p
+            class="after:text-Light-Red after:bg-Light-Grayish-Red relative after:absolute after:-top-1 after:rounded-3xl after:p-1 after:text-xs after:content-['-25%'] sm:after:-right-16 sm:after:-top-[6px] sm:after:px-4 sm:after:py-2"
+          >
+            Yearly Billing
+          </p>
+        </div>
+        <div class="-mx-4 mt-8 border-t-2"></div>
+        <div
+          class="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-between"
+        >
+          <ul
+            class="*:text-Grayish-Blue flex flex-col items-center gap-2 *:flex *:items-center *:gap-2 *:text-sm *:font-semibold sm:items-start"
+          >
+            <li>
+              <img src="./images/icon-check.svg" alt="" />Unlimited websites
+            </li>
+            <li>
+              <img src="./images/icon-check.svg" alt="" />100% data ownership
+            </li>
+            <li><img src="./images/icon-check.svg" alt="" />Email reports</li>
+          </ul>
+          <button
+            class="bg-Dark-Desaturated-Blue hover:text-Very-Pale-Blue text-Pale-Blue rounded-full px-8 py-2 text-sm font-semibold transition-colors"
+          >
+            Start my trial
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
